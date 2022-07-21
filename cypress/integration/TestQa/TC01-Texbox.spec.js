@@ -6,5 +6,9 @@ describe('references', function(){
     it('text box', function(){
         cy.visit('/')
         references.TexBox().type('test')
-    })
+        references.TexboxEmail().type('test@test.com')
+        references.TexboxCurrentAddress().type('this is a tes, because i need learn cypress.')
+        references.TexboxPermanentAddress().type('test2')
+        references.ButtonSubmit().click()
+     })
 })

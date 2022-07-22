@@ -1,4 +1,5 @@
 import Texbox from '../POM-REFERENCES/texbox'
+import Webtables from '../POM-REFERENCES/webtables'
 
 describe('Texbox', function(){
     const texboxPage = new Texbox()
@@ -11,7 +12,21 @@ describe('Texbox', function(){
         texboxPage.TexboxPermanentAddress().type('test2')
         texboxPage.ButtonSubmit().click()
      })
-     it ('Web Tables', function(){
-         cy.visit('//webtables')
-     })
+    
+})
+
+describe('webtables', function(){
+    const webtablespage = new Webtables()
+
+    it.only ('webtables', function(){
+        webtablespage.url();
+        webtablespage.buttonAdd().click()
+        webtablespage.firstName().type('test')
+        webtablespage.lastName().type('test')
+        webtablespage.userEmail().type('test@test.com')
+        webtablespage.age().type('20')
+        webtablespage.salary().type('220')
+        webtablespage.department().type('QA')
+        webtablespage.submitButton().click()
+    })
 })

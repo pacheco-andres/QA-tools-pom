@@ -12,7 +12,7 @@ class Texbox{
         return cy.get('#permanentAddress')
     }
     ButtonSubmit(){
-        return cy.get('#submit')
+        return cy.get('#submit') 
     }
 }
 export default Texbox 

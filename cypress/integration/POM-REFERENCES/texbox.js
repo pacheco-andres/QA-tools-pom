@@ -1,4 +1,4 @@
-class References{
+class Texbox{
     TexBox(){
         return cy.get("input[placeholder=\"Full Name\"]")
     }
@@ -15,4 +15,4 @@ class References{
         return cy.get('#submit')
     }
 }
-export default References 
+export default Texbox 

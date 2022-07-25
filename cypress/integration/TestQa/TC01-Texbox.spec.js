@@ -1,5 +1,6 @@
 import Texbox from '../POM-REFERENCES/texbox'
 import Webtables from '../POM-REFERENCES/webtables'
+import Register from '../POM-REFERENCES/registertobookstore'
 
 describe('Texbox', function(){
     const texboxPage = new Texbox()
@@ -18,7 +19,7 @@ describe('Texbox', function(){
 describe('webtables', function(){
     const webtablespage = new Webtables()
 
-    it.only ('webtables', function(){
+    it('webtables', function(){
         webtablespage.url();
         webtablespage.buttonAdd().click()
         webtablespage.firstName().type('test')
@@ -28,5 +29,19 @@ describe('webtables', function(){
         webtablespage.salary().type('220')
         webtablespage.department().type('QA')
         webtablespage.submitButton().click()
+    })
+})
+
+describe('Register to book store', function(){
+    const registertobookstore = new Register()
+
+    it.only('register', function(){
+        registertobookstore.url();
+        registertobookstore.firstName().type('test')
+        registertobookstore.lastName().type('test')
+        registertobookstore.userName().type('test')
+        registertobookstore.password().type('test')
+        registertobookstore.robot().click()
+        registertobookstore.buttonRegister().click()
     })
 })
